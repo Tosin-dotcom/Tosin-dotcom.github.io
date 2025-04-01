@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <script src="styles.js" defer></script>
     <style>
       :root {
         --primary: #4facfe;
@@ -136,7 +137,7 @@
 
       /* Hero Section */
       .hero {
-        padding: 100px 0 100px;
+        padding: 70px 0 70px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -732,6 +733,39 @@
         animation: glow 3s infinite;
       }
 
+      .parallax-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+
+      @keyframes blinkCaret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: var(--primary);
+        }
+      }
+
+      .typewriter-container {
+        min-height: 80px;
+        margin: 1rem 0;
+      }
+
+      #typewriter {
+        color: var(--text-highlight);
+        font-weight: 700;
+        display: inline-block;
+        border-right: 3px solid var(--primary);
+        padding-right: 5px;
+        animation: blinkCaret 0.75s step-end infinite;
+      }
+
       /* Gradient text */
       .gradient-text {
         background: linear-gradient(to right, var(--primary), var(--secondary));
@@ -1325,19 +1359,21 @@
           <div class="hero-content">
             <div class="greeting">Hello, I'm</div>
             <h1>Iyiola <span class="title-animation">Oluwatosin</span></h1>
+            <div class="typewriter-container">
+              <span id="typewriter"></span>
+            </div>
             <div class="hero-subtitle">
-              A Backend Developer and Software Engineer specialized in building
-              reliable, scalable, and high-performance applications.
+              Specialized in building reliable, scalable, and high-performance systems
             </div>
             <div class="hero-btns">
               <a href="#contact" class="btn btn-primary">Contact Me</a>
               <a href="#projects" class="btn btn-outline">View Projects</a>
             </div>
             <div class="social-links">
-              <a href="https://github.com/" target="_blank"
+              <a href="https://github.com/Tosin-dotcom" target="_blank"
                 ><i class="fab fa-github"></i
               ></a>
-              <a href="https://linkedin.com/" target="_blank"
+              <a href="https://www.linkedin.com/in/iyiola-tosin/" target="_blank"
                 ><i class="fab fa-linkedin"></i
               ></a>
               <a href="mailto:tosiniyiola00@gmail.com"
@@ -1573,7 +1609,7 @@
             <div class="project-content">
               <h3 class="project-title">Web Journal</h3>
               <p>
-                : Launched a platform for users to document thoughts,
+                Launched a platform for users to document thoughts,
                 successfully engaging 100+ users.
               </p>
               <div class="project-tech">
